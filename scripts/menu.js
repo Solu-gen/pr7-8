@@ -68,6 +68,38 @@ scrollTopButton.addEventListener('click', () => {
     });
 });
 
+
+function toggleAccordion(button) {
+    // Находим текущий контент
+    const currentContent = button.closest('.border').querySelector('.accordion-content');
+    const currentIcon = button.querySelector('svg');
+
+    // Закрываем все другие открытые элементы
+    document.querySelectorAll('.accordion-content').forEach(content => {
+        if (content !== currentContent && !content.classList.contains('hidden')) {
+            content.classList.add('hidden');
+            const otherButton = content.closest('.border').querySelector('button');
+            const otherIcon = otherButton.querySelector('svg');
+            otherIcon.classList.remove('rotate-180');
+            otherButton.classList.remove('bg-gray-50');
+            otherButton.classList.add('bg-white');
+        }
+    });
+
+    // Переключаем текущий элемент
+    currentContent.classList.toggle('hidden');
+    currentIcon.classList.toggle('rotate-180');
+
+    // Меняем фон кнопки
+    if (currentContent.classList.contains('hidden')) {
+        button.classList.remove('bg-gray-50');
+        button.classList.add('bg-white');
+    } else {
+        button.classList.remove('bg-white');
+        button.classList.add('bg-gray-50');
+    }
+}
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-item');
 let autoAdvanceTimer;

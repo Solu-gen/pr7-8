@@ -1,3 +1,26 @@
+.field-error {
+    border-color: #ef4444;
+
+}
+
+.field-error:focus {
+    border-color: #ef4444;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5);
+}
+
+.error-message {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+.field-error:focus-visible {
+    border-color: #ef4444;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5);
+}
+
 .carousel-container {
     perspective: 1000px;
     touch-action: pan-y pinch-zoom;

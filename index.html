@@ -23,7 +23,7 @@
 
                 <nav id="mainNav" class="header__nav">
                     <ul
-                        class="nav__list text-center md:flex md:justify-start md:ml-8 md:space-x-8 xl:ml-16 xl:space-x-14">
+                        class="nav__list text-center md:flex md:justify-start md:ml-8 md:space-x-8 xl:ml-16 xl:space-x-10">
                         <li class="nav__item">
                             <a href="404.html" class="nav__link active text-lg font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none 
                             hover:text-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">МЕНЮ</a>
@@ -62,7 +62,7 @@
                     <div class="hidden lg:flex lg:items-center lg:space-x-8">
                         <p
                             class="max-[1116px]:hidden text-lg font-medium text-gray-900 whitespace-nowrap transition-all duration-200 rounded hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                            +8 (000)-000-00-00</p>
+                            +7 (000)-000-00-00</p>
                         <a href="#"
                             class="text-lg font-medium text-gray-900 transition-all duration-200 rounded hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">ВОЙТИ</a>
                     </div>
@@ -107,7 +107,7 @@
                         </svg>
                     </button>
 
-                    <button class="nav-button absolute right--12 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full 
+                    <button class="nav-button absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full 
                     flex items-center justify-center z-20 text-white touch-manipulation" onclick="nextSlide()"
                         title="Next slide">
                         <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -671,27 +671,39 @@
                     <h2 class="text-2xl min-[1068px]:text-3xl font-bold mb-4"> Подберем идеальное решение для вашего
                         события
                     </h2>
-                    <p class="text-lg">Заполните форму, и мы ответим на все ваши вопросы</p>
+                    <p class="text-lg lg:text-xl">Заполните форму, и мы ответим на все ваши вопросы</p>
                 </div>
                 <div class="min-[561px]-pt-8 pt-4">
                     <form class="space-y-4">
                         <div class="space-y-2">
-                            <label for="name" class="block text-base font-medium text-white">Ваше имя</label>
+                            <label for="name" class="block text-base lg:text-lg font-medium text-white">Ваше имя</label>
                             <div class="mt-1">
-                                <input id="name" type="text" name="name" placeholder="Фамилия имя"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-lg text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-stone-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                <input type="text" placeholder="Фамилия Имя Очество" id="fullname" 
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-lg lg:text-xl text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-stone-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
                             </div>
                         </div>
                         <div class="space-y-2">
-                            <label for="phone" class="block text-base font-medium text-white">Номер телефона</label>
+                            <label class="block text-base lg:text-lg font-medium text-white">Номер телефона</label>
                             <div class="mt-1">
-                                <input id="phone" type="text" name="phone" placeholder="+7 (000) 000-00-00"
-                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-lg text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-stone-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                                <input type="tel" id="phone" placeholder="+7 (___) ___-__-__"
+                                    class="block w-full rounded-md bg-white/5 px-3 py-1.5 text-lg lg:text-xl text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-stone-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input type="checkbox" id="agreement" required
+                                    class="w-4 h-4 text-indigo-600 border-stone-300 rounded focus:ring-indigo-500">
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label for="agreement" class="font-medium text-white">
+                                    Соглашаюсь на обработку персональных данных
+                                </label>
                             </div>
                         </div>
 
                         <button type="submit"
-                            class="mt-6 flex w-full justify-center rounded-md bg-stone-400 p-3 text-sm/6 font-semibold text-white 
+                            class="mt-6 flex w-full justify-center rounded-md bg-stone-400 p-3 text-lg font-semibold text-white 
                             hover:bg-stone-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:bg-stone-400">
                             ОСТАВИТЬ ЗАЯВКУ</button>
                     </form>
@@ -723,9 +735,9 @@
                     больше</button>
             </div>
             <div class="relative flex items-center justify-center">
-                <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-4 h-[50vh] w-full">
+                <div class="relative grid grid-cols-1 lg:grid-cols-3 gap-4 sm:px-12 md:px-24 lg:px-0 h-[100vh] lg:h-[50vh] w-full">
                     <div
-                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 h-[65vh] w-[50vw] bg-red-200 rounded-2xl">
+                        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -z-0 h-[110vh] lg:h-[65vh] w-[50vw] bg-red-200 rounded-2xl">
                     </div>
                     <div class="relative block rounded-lg overflow-hidden h-full w-full bg-black">
                         <img alt="Наша работа на свадьбе" src="assets/img/img14.jpg"
