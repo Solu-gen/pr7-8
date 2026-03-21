@@ -24,7 +24,7 @@
                 <nav id="mainNav" class="header__nav">
                     <ul
                         class="nav__list text-center md:flex md:justify-start md:ml-8 md:space-x-8 xl:ml-16 xl:space-x-14">
-                        <li class="nav__item"><a href="404.html" class="nav__link active text-lg font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none 
+                        <li class="nav__item"><a href="react-menu/react-menu.html" class="nav__link active text-lg font-medium text-gray-900 transition-all duration-200 rounded focus:outline-none 
                             hover:text-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">МЕНЮ</a>
                         </li>
                         <li>
@@ -60,7 +60,7 @@
                     <div class="hidden lg:flex lg:items-center lg:space-x-8">
                         <p
                             class="max-[1116px]:hidden text-lg font-medium text-gray-900 whitespace-nowrap transition-all duration-200 rounded hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-                            +8 (000)-000-00-00</p>
+                            +7 (000)-000-00-00</p>
                         <a href="#"
                             class="text-lg font-medium text-gray-900 transition-all duration-200 rounded hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">ВОЙТИ</a>
                     </div>
@@ -250,15 +250,15 @@
                 <div class="col-span-1 block w-full lg:max-w-full max-lg:mx-auto">
                     <div
                         class="relative overflow-hidden grid grid-cols-1 items-center justify-center lg:h-[80vh] rounded-xl sm:rounded-2xl  bg-stone-500">
-                        <div class="px-6 py-12 lg:p-4">
+                        <div class="px-6 py-10 lg:px-6 lg:py-8">
                             <div class="text-center lg:text-left tracking-tight text-white">
-                                <h2 class="text-2xl min-[1068px]:text-3xl font-bold"> Подберем идеальное решение
+                                <h2 class="text-2xl  font-bold"> Подберем идеальное решение
                                     для вашего события
                                 </h2>
-                                <p class="text-lg">Заполните форму, и мы ответим на все ваши вопросы</p>
+                                <p class="text-lg py-4">Заполните форму, и мы ответим на все ваши вопросы</p>
                             </div>
-                            <div class="min-[561px]-pt-8 pt-4">
-                                <form class="space-y-6">
+                            <div class="min-[561px]-pt-8">
+                                <form class="space-y-4">
                                     <div class="space-y-2">
                                         <label for="name" class="block text-base font-medium text-white">Ваше
                                             имя</label>
@@ -439,39 +439,77 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
         </svg>
     </button>
-    <script>
-        function toggleAccordion(button) {
-            // Находим текущий контент
-            const currentContent = button.closest('.border').querySelector('.accordion-content');
-            const currentIcon = button.querySelector('svg');
-
-            // Закрываем все другие открытые элементы
-            document.querySelectorAll('.accordion-content').forEach(content => {
-                if (content !== currentContent && !content.classList.contains('hidden')) {
-                    content.classList.add('hidden');
-                    const otherButton = content.closest('.border').querySelector('button');
-                    const otherIcon = otherButton.querySelector('svg');
-                    otherIcon.classList.remove('rotate-180');
-                    otherButton.classList.remove('bg-gray-50');
-                    otherButton.classList.add('bg-white');
-                }
-            });
-
-            // Переключаем текущий элемент
-            currentContent.classList.toggle('hidden');
-            currentIcon.classList.toggle('rotate-180');
-
-            // Меняем фон кнопки
-            if (currentContent.classList.contains('hidden')) {
-                button.classList.remove('bg-gray-50');
-                button.classList.add('bg-white');
-            } else {
-                button.classList.remove('bg-white');
-                button.classList.add('bg-gray-50');
-            }
-        }
-    </script>
+    
     <script src="scripts/menu.js"></script>
 </body>
 
 </html>
+
+
+
+
+<div class="field">
+    <label class="label">ФИО <span class="has-text-danger">*</span></label>
+    <div class="control has-icons-left">
+        <input class="input" type="text" id="fullname" placeholder="Иванов Иван Иванович">
+        <span class="icon is-small is-left">
+            <i class="fas fa-user"></i>
+        </span>
+    </div>
+    <p class="help" id="fullnameHelp">Введите фамилию, имя и отчество</p>
+</div>
+<!-- Поле Телефон (текстовое, маска, обязательное) -->
+<div class="field">
+    <label class="label">Телефон <span class="has-text-danger">*</span></label>
+    <div class="control has-icons-left">
+        <input class="input" type="tel" id="phone" placeholder="+7 (___) ___-__-__">
+        <span class="icon is-small is-left">
+            <i class="fas fa-phone"></i>
+        </span>
+    </div>
+    <p class="help" id="phoneHelp">Формат: +7 (XXX) XXX-XX-XX</p>
+</div>
+<!-- Поле Email (email, обязательное) -->
+<div class="field">
+    <label class="label">Email <span class="has-text-danger">*</span></label>
+    <div class="control has-icons-left">
+        <input class="input" type="email" id="email" placeholder="example@mail.ru">
+        <span class="icon is-small is-left">
+            <i class="fas fa-envelope"></i>
+        </span>
+    </div>
+    <p class="help" id="emailHelp">Введите корректный email адрес</p>
+</div>
+<!-- Поле Сообщение (textarea, необязательное) -->
+<div class="field">
+    <label class="label">Сообщение</label>
+    <div class="control">
+        <textarea class="textarea" id="message" placeholder="Текст сообщения..."></textarea>
+    </div>
+    <p class="help" id="messageHelp">До 500 символов</p>
+</div>
+<!-- Согласие на обработку данных (checkbox) -->
+<div class="field">
+    <div class="control">
+        <label class="checkbox">
+            <input type="checkbox" id="agreement" required>
+            Я согласен на обработку персональных данных
+        </label>
+    </div>
+</div>
+<!-- Кнопка отправки -->
+<div class="field is-grouped is-grouped-centered">
+    <div class="control">
+        <button type="submit" class="button is-primary">
+            <span class="icon">
+                <i class="fas fa-paper-plane"></i>
+            </span>
+            <span>Отправить</span>
+        </button>
+    </div>
+    <div class="control">
+        <button type="reset" class="button is-light">
+            <span>Очистить</span>
+        </button>
+    </div>
+</div>
