@@ -12,7 +12,7 @@ function ProductCard({
 
   return (
     <div
-      className="h-[55vh] transition-all duration-300"
+      className="h-[52vh] transition-all duration-300"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
