@@ -34,16 +34,16 @@ export default function Header({ cartCount = 0 }) {
 
   // Массив пунктов меню с названиями и ссылками
   const navItems = [
-    { label: "МЕНЮ", href: "" },
-    { label: "СОБЫТИЕ", href: "/index.html#event" },
-    { label: "КОНТАКТЫ", href: "/contacts.html" },
-    { label: "ДОСТАВКА И ОПЛАТА", href: "/404.html" },
-    { label: "О НАС", href: "/index.html#aboutus" },
-    { label: "FAQ", href: "/faq.html" },
+    { label: "МЕНЮ", href: "#" },
+    { label: "СОБЫТИЕ", href: "../index.html#event" },
+    { label: "КОНТАКТЫ", href: "../contacts.html" },
+    { label: "ДОСТАВКА И ОПЛАТА", href: "../404.html" },
+    { label: "О НАС", href: "../index.html#aboutus" },
+    { label: "FAQ", href: "../faq.html" },
   ];
 
   return (
-    <header className="sticky top-0 bg-stone-100 z-[1000]">
+    <header className="px-8 sticky top-0 bg-stone-100 z-[1000]">
 
       {/* Overlay */}
       {menuOpen && (
@@ -53,7 +53,7 @@ export default function Header({ cartCount = 0 }) {
         />
       )}
 
-      <div className="flex items-center px-4 mx-auto sm:px-6 lg:px-8 xl:px-12">
+      <div className="flex items-center mx-auto">
         <div className="flex items-center justify-between h-16 lg:h-[72px] w-full">
 
           {/* Лого */}
@@ -69,20 +69,18 @@ export default function Header({ cartCount = 0 }) {
             className={`fixed top-0 right-0 h-full w-[50%] md:w-full bg-white/75 md:bg-transparent z-[1000] transform transition-transform duration-300
             ${menuOpen ? "translate-x-0" : "translate-x-full md:translate-x-0 md:static md:w-auto md:h-auto"}`}
           >
-            <ul className="flex flex-col text-center mt-20 px-6 md:mt-0 md:flex-row md:space-x-8 xl:space-x-14 md:space-y-0">
+            <ul className="flex flex-col text-center px-6 mt-20 md:mt-0 md:flex-row md:space-x-8 xl:space-x-10">
               {navItems.map((item, i) => {
                 // Для пунктов "О НАС" и "FAQ" добавляем специальные классы видимости
                 const isSpecialItem = item.label === "О НАС" || item.label === "FAQ";
-                const liClasses = `border-b border-white rounded py-3 md:border-b-0 md:py-0 ${isSpecialItem ? "block min-[768px]:hidden min-[1165px]:block" : ""
-                  }`;
+                const liClasses = `border-b border-white rounded py-3 md:border-b-0 md:py-0 ${isSpecialItem ? "block min-[768px]:hidden min-[1165px]:block" : "" }`;
 
                 return (
                   <li key={i} className={liClasses}>
                     <a
                       href={item.href}
                       onClick={() => setMenuOpen(false)}
-                      className="block text-lg font-medium text-gray-900 hover:text-indigo-600"
-                    >
+                      className="block text-lg font-medium text-gray-900 hover:text-indigo-600">
                       {item.label}
                     </a>
                   </li>
@@ -96,12 +94,10 @@ export default function Header({ cartCount = 0 }) {
             {/* Телефон + вход */}
             <div className="hidden lg:flex lg:items-center lg:space-x-8">
               <p className="hidden xl:block text-lg font-medium text-gray-900">
-                +7 (000)-000-00-00
-              </p>
+                +7(000)-000-00-00</p>
 
               <a href="#"
-                className="text-lg font-medium text-gray-900 hover:text-indigo-600"
-              >
+                className="text-lg font-medium text-gray-900 hover:text-indigo-600">
                 ВОЙТИ
               </a>
             </div>
@@ -142,10 +138,8 @@ export default function Header({ cartCount = 0 }) {
                     }`}
                 />
               </button>
-
             </div>
           </div>
-
         </div>
       </div>
     </header>

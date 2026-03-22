@@ -3,15 +3,15 @@ import ProductGrid from "./components/ProductGrid";
 import Header from "./components/Header";
 
 const products = [
-  { id: 1, title: "БРУСКЕТТА №1", category: "Брускетта", image: "/menu-page/src/assets/menu-img/img1.jpg" },
-  { id: 2, title: "БРУСКЕТТА №2", category: "Брускетта", image: "/menu-page/src/assets/menu-img/img2.jpg" },
-  { id: 3, title: "БРУСКЕТТА №3", category: "Брускетта", image: "/menu-page/src/assets/menu-img/img3.jpg" },
-  { id: 4, title: "КАНАПЕ №1", category: "Канапе", image: "/menu-page/src/assets/menu-img/can1.jpg" },
-  { id: 5, title: "КАНАПЕ №2", category: "Канапе", image: "/menu-page/src/assets/menu-img/can2.jpg" },
-  { id: 6, title: "КАНАПЕ №3", category: "Канапе", image: "/menu-page/src/assets/menu-img/can3.jpg" },
-  { id: 7, title: "ТАРТАЛЕТКИ №1", category: "Тарталетки", image: "/menu-page/src/assets/menu-img/tar1.jpg" },
-  { id: 8, title: "ТАРТАЛЕТКИ №2", category: "Тарталетки", image: "/menu-page/src/assets/menu-img/tar2.jpg" },
-  { id: 9, title: "ТАРТАЛЕТКИ №3", category: "Тарталетки", image: "/menu-page/src/assets/menu-img/tar3.jpg" },
+  { id: 1, title: "БРУСКЕТТА №1", category: "Брускетта", image: "./src/assets/menu-img/img1.jpg" },
+  { id: 2, title: "БРУСКЕТТА №2", category: "Брускетта", image: "./src/assets/menu-img/img2.jpg" },
+  { id: 3, title: "БРУСКЕТТА №3", category: "Брускетта", image: "./src/assets/menu-img/img3.jpg" },
+  { id: 4, title: "КАНАПЕ №1", category: "Канапе", image: "./src/assets/menu-img/can1.jpg" },
+  { id: 5, title: "КАНАПЕ №2", category: "Канапе", image: "./src/assets/menu-img/can2.jpg" },
+  { id: 6, title: "КАНАПЕ №3", category: "Канапе", image: "./src/assets/menu-img/can3.jpg" },
+  { id: 7, title: "ТАРТАЛЕТКИ №1", category: "Тарталетки", image: "./src/assets/menu-img/tar1.jpg" },
+  { id: 8, title: "ТАРТАЛЕТКИ №2", category: "Тарталетки", image: "./src/assets/menu-img/tar2.jpg" },
+  { id: 9, title: "ТАРТАЛЕТКИ №3", category: "Тарталетки", image: "./src/assets/menu-img/tar3.jpg" },
 ];
 
 function App() {
