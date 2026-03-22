@@ -55,9 +55,9 @@ function App() {
     <>
       <Header cartCount={totalCount} />
       <main>
-        <div className="bg-stone-100 p-8 space-y-6">
+        <div className="bg-stone-100 px-8 py-2 min-[490px]:p-8 space-y-6">
           {/* Фильтры */}
-          <div className="borderbox space-x-3 space-y-2">
+          <div className="borderbox space-x-3 max-[490px]:space-y-2">
             {["Все", "Брускетты", "Канапе", "Тарталетки"].map((f) => (
               <button
                 key={f}
